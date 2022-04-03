@@ -1,4 +1,6 @@
 import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class CartItem {
   final String id;
@@ -33,7 +35,17 @@ class Cart with ChangeNotifier {
     return total;
   }
 
-  void addItem(String productId, double price, String title) {
+  void addItem(String productId, double price, String title) async{
+    // final url = Uri.parse(
+    //   'https://fine-avatar-234209-default-rtdb.firebaseio.com/products.json');
+
+    // try{
+    //   final response = await http.post(url, body: jsonEncode({
+    //     'title' : title,
+    //     'price' : price,
+    //     'quantity' : 
+    //   }),);
+    // }
     if (_items.containsKey(productId)) {
       _items.update(
         productId,

@@ -5,11 +5,6 @@ import 'package:shop_app/providers/product.dart';
 import 'package:shop_app/screens/product_detail_screen.dart';
 
 class ProductItem extends StatelessWidget {
-  // final String id;
-  // final String title;
-  // final String imageUrl;
-
-  // const ProductItem(this.id, this.title, this.imageUrl);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +32,7 @@ class ProductItem extends StatelessWidget {
               icon: Icon(
                   product.isFavorite ? Icons.favorite : Icons.favorite_border),
               onPressed: () {
-                product.toggleFAvouriteStatus();
+                product.toggleFavouriteStatus();
               },
               color: Theme.of(context).accentColor,
             ),
